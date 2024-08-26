@@ -9,6 +9,14 @@ import { compareDates } from "@/utils/compare-dates";
 
 export {
     Environment,
+    useEnv,
+    useConfig,
+    debounce,
+    throttle,
+    mapObject,
+    wait,
+    castClassRecord,
+    compareDates,
 }
 
 export const useUtils = () => {

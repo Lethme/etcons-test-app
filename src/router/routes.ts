@@ -1,5 +1,10 @@
 import type {RouteRecordRaw} from "vue-router";
 import HomeView from "@/views/home/home-view.vue";
+import LinkView from "@/views/link/link-view.vue";
+import SelectView from "@/views/select/select-view.vue";
+import TimeView from "@/views/time/time-view.vue";
+import TableView from "@/views/table/table-view.vue";
+import TableExtendedView from "@/views/table-extended/table-extended-view.vue";
 
 export const routes: ReadonlyArray<RouteRecordRaw> = [{
     path: '/',
@@ -12,7 +17,7 @@ export const routes: ReadonlyArray<RouteRecordRaw> = [{
 }, {
     path: '/link',
     name: 'link',
-    component: () => import("@/views/link/link-view.vue"),
+    component: LinkView,
     meta: {
         useInGlobalNavigation: true,
         routeTitle: "Поле Link",
@@ -20,7 +25,7 @@ export const routes: ReadonlyArray<RouteRecordRaw> = [{
 }, {
     path: '/select',
     name: 'select',
-    component: () => import("@/views/select/select-view.vue"),
+    component: SelectView,
     meta: {
         useInGlobalNavigation: true,
         routeTitle: "Сброс значений в Select",
@@ -28,7 +33,7 @@ export const routes: ReadonlyArray<RouteRecordRaw> = [{
 }, {
     path: '/time',
     name: 'time',
-    component: () => import("@/views/time/time-view.vue"),
+    component: TimeView,
     meta: {
         useInGlobalNavigation: true,
         routeTitle: "DateTime picker",
@@ -36,7 +41,7 @@ export const routes: ReadonlyArray<RouteRecordRaw> = [{
 }, {
     path: '/table',
     name: 'table',
-    component: () => import("@/views/table/table-view.vue"),
+    component: () => TableView,
     meta: {
         useInGlobalNavigation: true,
         routeTitle: "Многострочный текст в ячейке",
@@ -44,7 +49,7 @@ export const routes: ReadonlyArray<RouteRecordRaw> = [{
 }, {
     path: '/table-extended',
     name: 'table-extended',
-    component: () => import("@/views/table-extended/table-extended-view.vue"),
+    component: TableExtendedView,
     meta: {
         useInGlobalNavigation: true,
         routeTitle: "Таблица с поиском",

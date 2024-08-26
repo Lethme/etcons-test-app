@@ -1,6 +1,11 @@
 <template>
-    <h1 class="home-view-title">FrontEnd developer (Vue.js)</h1>
-    <h2 class="home-view-subtitle">ООО ЭтКонс - Тестовое задание</h2>
+    <div class="home-view-picture">
+        <img src="/logo.svg" />
+    </div>
+    <div class="home-view-intro">
+        <h1 class="home-view-title">FrontEnd developer (Vue.js)</h1>
+        <h2 class="home-view-subtitle">ООО ЭтКонс - Тестовое задание</h2>
+    </div>
 </template>
 
 <script setup lang="ts">
@@ -8,12 +13,46 @@
 </script>
 
 <style scoped lang="less">
-.home-view-title {
-    font-size: 3rem;
+.home-view-intro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+    margin-top: 2em;
 }
 
-.home-view-subtitle {
+.home-view-title {
+    font-size: 3rem;
+    text-align: center;
+    
+    @media (max-width: 960px) {
+        font-size: 2rem;
+    }
+}
+
+.home-view-subtitle,
+.home-view-suptitle {
     font-size: 2rem;
     font-weight: 200;
+    
+    text-align: center;
+    
+    @media (max-width: 960px) {
+        font-size: 1.5rem;
+    }
+}
+
+.home-view-picture {
+    max-width: 150px;
+    min-width: 150px;
+    aspect-ratio: 1 / 1;
+    
+    img {
+        width: 100%;
+    }
+    
+    @media (max-width: 960px) {
+        min-width: 100px;
+    }
 }
 </style>
