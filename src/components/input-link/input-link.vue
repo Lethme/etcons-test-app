@@ -4,9 +4,9 @@
             <input-text
                 ref="inputRef"
                 :model-value="props.modelValue"
-                @change="modelValueChanged"
-                @keypress.enter="modelValueChanged"
-                @blur="modelValueChanged"
+                @change="modelValueChangedDebounced"
+                @keypress.enter="modelValueChangedDebounced"
+                @blur="modelValueChangedDebounced"
                 placeholder="https://"
                 :invalid="modelValueInvalid"
             />
@@ -43,7 +43,7 @@ const inputRef = ref<InstanceType<typeof InputText> | null>(null);
 const pageTitle = ref<string | undefined>("");
 const modelValueEditMode = ref(false);
 
-const { fetchPageTitle, isValidUrl } = useUtils();
+const { fetchPageTitle, isValidUrl, debounce } = useUtils();
 
 const modelValueChanged = async (event: Event) => {
     const el = event.target as HTMLInputElement;
@@ -57,6 +57,8 @@ const modelValueChanged = async (event: Event) => {
     
     modelValueEditMode.value = false;
 }
+
+const modelValueChangedDebounced = debounce(modelValueChanged, 100);
 
 const modelValueEditClick = (event: Event) => {
     modelValueEditMode.value = true;
