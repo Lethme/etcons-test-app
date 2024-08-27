@@ -67,6 +67,7 @@ const menuItems = computed<Array<MenuItem>>(() => {
     
     position: fixed;
     top: 1em;
+    z-index: 10000;
     
     width: 100%;
     

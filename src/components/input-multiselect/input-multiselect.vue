@@ -5,7 +5,7 @@
             @update:modelValue="emit('update:modelValue', $event)"
             :options="props.options"
             :optionLabel="props.optionLabel"
-            filter
+            :filter="props.filter"
             :placeholder="props.placeholder"
             :maxSelectedLabels="props.maxSelectedLabels"
         >
@@ -29,8 +29,9 @@ import {computed, ref} from "vue";
 interface PropsType<TOption extends Record<string, any> = Record<string, any>> {
     options: Array<TOption>;
     modelValue: Array<TOption>;
-    optionLabel?: keyof TOption;
+    optionLabel?: keyof TOption | ((item: TOption) => any);
     placeholder?: string;
+    filter?: boolean;
     maxSelectedLabels?: number;
 }
 

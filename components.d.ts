@@ -8,14 +8,22 @@ export {}
 declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('primevue/button')['default']
+    Column: typeof import('primevue/column')['default']
     Container: typeof import('./src/components/container.vue')['default']
+    DataTable: typeof import('primevue/datatable')['default']
+    DatatableExtended: typeof import('./src/components/datatable-extended/datatable-extended.vue')['default']
+    DatePicker: typeof import('primevue/datepicker')['default']
     Divider: typeof import('primevue/divider')['default']
+    InputGroup: typeof import('primevue/inputgroup')['default']
     InputLink: typeof import('./src/components/input-link/input-link.vue')['default']
     InputMultiselect: typeof import('./src/components/input-multiselect/input-multiselect.vue')['default']
     InputText: typeof import('primevue/inputtext')['default']
+    InputTime: typeof import('./src/components/input-time/input-time.vue')['default']
+    LogDatatable: typeof import('./src/components/log-datatable/log-datatable.vue')['default']
     Menubar: typeof import('primevue/menubar')['default']
     MultiSelect: typeof import('primevue/multiselect')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
+    Textarea: typeof import('primevue/textarea')['default']
   }
 }
