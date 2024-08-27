@@ -9,6 +9,7 @@ import {PrimeVueResolver} from "unplugin-vue-components/resolvers";
 
 // https://vitejs.dev/config/
 export default defineConfig({
+    base: '/etcons-test-app/',
     plugins: [
         vue(),
         vueJsx(),

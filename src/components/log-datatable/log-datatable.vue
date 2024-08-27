@@ -53,7 +53,7 @@ const logEntries = computed(() => {
 const logEntriesFormatted = computed(() => {
     return [
         logEntries.value
-            .map(entry => `<p>[${entry.time}] ${entry.record}</p>`)
+            .map(entry => `<p>[${entry!.time}] ${entry!.record}</p>`)
             .join('')
     ];
 });

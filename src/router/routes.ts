@@ -41,7 +41,7 @@ export const routes: ReadonlyArray<RouteRecordRaw> = [{
 }, {
     path: '/table',
     name: 'table',
-    component: () => TableView,
+    component: TableView,
     meta: {
         useInGlobalNavigation: true,
         routeTitle: "Многострочный текст в ячейке",
