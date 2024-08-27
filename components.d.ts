@@ -14,6 +14,7 @@ declare module 'vue' {
     DatatableExtended: typeof import('./src/components/datatable-extended/datatable-extended.vue')['default']
     DatePicker: typeof import('primevue/datepicker')['default']
     Divider: typeof import('primevue/divider')['default']
+    GlobalNavigation: typeof import('./src/components/global-navigation/global-navigation.vue')['default']
     InputGroup: typeof import('primevue/inputgroup')['default']
     InputLink: typeof import('./src/components/input-link/input-link.vue')['default']
     InputMultiselect: typeof import('./src/components/input-multiselect/input-multiselect.vue')['default']

@@ -1,5 +1,5 @@
 <template>
-    <h1 style="margin-bottom: 1em; text-align: center; padding: .5em">{{ route.meta.routeTitle ?? route.name }}</h1>
+    <h1 style="margin-bottom: 1em; text-align: center; padding: .5em">{{ route.meta.routeTitleFull ?? route.meta.routeTitle ?? route.name }}</h1>
     <datatable-extended
         :value="data"
         :columns="columns"

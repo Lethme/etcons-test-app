@@ -52,6 +52,7 @@ export const routes: ReadonlyArray<RouteRecordRaw> = [{
     component: TableExtendedView,
     meta: {
         useInGlobalNavigation: true,
-        routeTitle: "Таблица с поиском (расширенное задание)",
+        routeTitle: "Таблица с поиском",
+        routeTitleFull: "Таблица с поиском (расширенное задание)",
     },
 }] as const;

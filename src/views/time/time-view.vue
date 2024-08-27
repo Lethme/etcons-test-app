@@ -1,5 +1,5 @@
 <template>
-    <h1 style="margin-bottom: 1em; text-align: center; padding: .5em">{{ route.meta.routeTitle ?? route.name }}</h1>
+    <h1 style="margin-bottom: 1em; text-align: center; padding: .5em">{{ route.meta.routeTitleFull ?? route.meta.routeTitle ?? route.name }}</h1>
     <h4 v-if="time">Значение переменной директивы v-model: {{ timeFormatted }}</h4>
     <h4 v-else>Время не выбрано</h4>
     <input-time v-model="time" />
