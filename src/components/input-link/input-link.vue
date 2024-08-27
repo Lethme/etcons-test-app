@@ -10,7 +10,13 @@
                 placeholder="https://"
                 :invalid="modelValueInvalid"
             />
-            <a class="external-link" v-if="!modelValueEditMode && !modelValueInvalid && !!pageTitle" :href="props.modelValue" target="_blank" v-tooltip.top="pageTitle">
+            <a
+                class="external-link"
+                v-if="!modelValueEditMode && !modelValueInvalid && !!pageTitle"
+                :href="props.modelValue"
+                target="_blank"
+                v-tooltip.top="!modelValueInvalid && pageTitle === 'External Link' ? props.modelValue : pageTitle"
+            >
                 {{ pageTitle }}
             </a>
         </div>
