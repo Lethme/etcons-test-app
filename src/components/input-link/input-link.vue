@@ -45,7 +45,9 @@ const modelValueChanged = async (event: Event) => {
     
     const title = await fetchPageTitle(el.value);
     
-    pageTitle.value = title || "External Link";
+    if (!!el.value && isValidUrl(el.value)) {
+        pageTitle.value = title || "External Link";
+    }
     
     modelValueEditMode.value = false;
 }

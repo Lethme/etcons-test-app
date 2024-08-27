@@ -11,8 +11,10 @@ declare module 'vue' {
     Container: typeof import('./src/components/container.vue')['default']
     Divider: typeof import('primevue/divider')['default']
     InputLink: typeof import('./src/components/input-link/input-link.vue')['default']
+    InputMultiselect: typeof import('./src/components/input-multiselect/input-multiselect.vue')['default']
     InputText: typeof import('primevue/inputtext')['default']
     Menubar: typeof import('primevue/menubar')['default']
+    MultiSelect: typeof import('primevue/multiselect')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
   }

@@ -1,5 +1,5 @@
 <template>
-    <h1 style="margin-bottom: 1em">{{ route.meta.routeTitle ?? route.name }}</h1>
+    <h1 style="margin-bottom: 1em; text-align: center; padding: .5em">{{ route.meta.routeTitle ?? route.name }}</h1>
     <input-link v-model="link" />
 </template>
 

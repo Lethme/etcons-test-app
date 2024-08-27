@@ -23,3 +23,15 @@ a {
         margin-left: .3em;
     }
 }
+
+.clickable-text {
+    color: unset;
+    text-decoration: none;
+
+    transition: color .2s ease;
+
+    &:hover,
+    &:active {
+        color: var(--p-primary-400);
+    }
+}
