@@ -13,6 +13,7 @@ declare module 'vue' {
     DataTable: typeof import('primevue/datatable')['default']
     DatatableExtended: typeof import('./src/components/datatable-extended/datatable-extended.vue')['default']
     Divider: typeof import('primevue/divider')['default']
+    Footer: typeof import('./src/components/footer/footer.vue')['default']
     GlobalNavigation: typeof import('./src/components/global-navigation/global-navigation.vue')['default']
     InputGroup: typeof import('primevue/inputgroup')['default']
     InputLink: typeof import('./src/components/input-link/input-link.vue')['default']
