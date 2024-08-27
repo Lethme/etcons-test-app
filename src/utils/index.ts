@@ -6,6 +6,8 @@ import { mapObject } from "@/utils/map-object";
 import { wait } from "@/utils/wait";
 import { castClassRecord } from "@/utils/cast-class-record";
 import { compareDates } from "@/utils/compare-dates";
+import { isValidUrl } from "@/utils/is-valid-url";
+import { fetchPageTitle } from "@/utils/fetch-page-title";
 
 export {
     Environment,
@@ -17,6 +19,8 @@ export {
     wait,
     castClassRecord,
     compareDates,
+    isValidUrl,
+    fetchPageTitle,
 }
 
 export const useUtils = () => {
@@ -29,5 +33,7 @@ export const useUtils = () => {
         wait,
         castClassRecord,
         compareDates,
+        isValidUrl,
+        fetchPageTitle,
     }
 }

@@ -9,6 +9,9 @@ declare module 'vue' {
   export interface GlobalComponents {
     Button: typeof import('primevue/button')['default']
     Container: typeof import('./src/components/container.vue')['default']
+    Divider: typeof import('primevue/divider')['default']
+    InputLink: typeof import('./src/components/input-link/input-link.vue')['default']
+    InputText: typeof import('primevue/inputtext')['default']
     Menubar: typeof import('primevue/menubar')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']

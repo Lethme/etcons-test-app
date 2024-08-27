@@ -15,7 +15,10 @@
   },
   "dependencies": {
     "@primevue/themes": "^4.0.4",
+    "@types/cheerio": "^0.22.35",
+    "@types/puppeteer": "^7.0.4",
     "axios": "^1.7.4",
+    "cheerio": "^1.0.0",
     "file-select-dialog": "^1.5.4",
     "moment": "^2.30.1",
     "pinia": "^2.1.7",

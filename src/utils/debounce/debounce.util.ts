@@ -1,10 +1,12 @@
+import type {PromiseType} from "@/utils/types";
+
 export function debounce<
     TFunction extends (...args: Array<any>) => any
 >(
     this: ThisParameterType<TFunction>,
     func: TFunction,
     delay: number = 0,
-    callback?: (arg: ReturnType<TFunction>) => void
+    callback?: (arg: ReturnType<TFunction> extends Promise<any> ? PromiseType<ReturnType<TFunction>> : ReturnType<TFunction>) => void
 ): (...args: Parameters<TFunction>) => void {
     // Store the ID of the timeout used for debouncing
     let timeoutId: number | undefined;

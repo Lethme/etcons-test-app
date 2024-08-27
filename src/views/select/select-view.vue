@@ -1,5 +1,5 @@
 <template>
-    <h1>{{ route.meta.routeTitle ?? route.name }}</h1>
+    <h1 style="margin-bottom: 1em">{{ route.meta.routeTitle ?? route.name }}</h1>
 </template>
 
 <script setup lang="ts">
