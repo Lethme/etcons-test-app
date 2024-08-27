@@ -1,5 +1,5 @@
 <template>
-    <div class="input-multiselect-wrapper">
+    <div :class="multiSelectWrapperClass">
         <MultiSelect
             :model-value="props.modelValue"
             @update:modelValue="emit('update:modelValue', $event)"
