@@ -12,7 +12,13 @@
                 <container class="datatable-extended-header">
                     <container class="datatable-extended-search-wrapper">
                         <input-group>
-                            <Button icon="pi pi-sliders-v" severity="success" aria-label="Filter" @click="filterSearchMultiselectClick" style="position: relative">
+                            <Button
+                                icon="pi pi-sliders-v"
+                                severity="success"
+                                aria-label="Filter"
+                                @click="filterSearchMultiselectClick" style="position: relative"
+                                v-tooltip.top="filterSearchMultiselectButtonTooltip"
+                            >
                                 <MultiSelect
                                     ref="filterSearchMultiselectRef"
                                     class="datatable-extended-filter-columns-select"
@@ -88,6 +94,16 @@ const emit = defineEmits([
 const filterSearchMultiselectRef = ref<InstanceType<typeof MultiSelect> | null>(null);
 const columnsToRender = computed(() => props.selectedColumns.length > 0 ? props.selectedColumns : props.columns);
 const columnsToSearch = ref<Array<Column>>([]);
+const filterSearchMultiselectButtonTooltip = computed(() => {
+    const columns = columnsToSearch.value.length > 0 ? columnsToSearch.value : columnsToRender.value;
+    const actualSearchColumns = columns.filter(cs => columnsToRender.value.some(cr => cr.field === cs.field));
+    
+    if (!actualSearchColumns.length || actualSearchColumns.length === columnsToRender.value.length) {
+        return "Поиск по всем полям";
+    }
+    
+    return `Поиск по следующим полям: ${actualSearchColumns.map(c => c.header).join(', ')}`;
+});
 
 const filterSearchMultiselectClick = (event: Event) => {
     filterSearchMultiselectRef.value?.show();
