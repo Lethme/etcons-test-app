@@ -4,7 +4,6 @@
             <input-text
                 ref="inputRef"
                 :model-value="props.modelValue"
-                @change="modelValueChangedDebounced"
                 @keypress.enter="modelValueChangedDebounced"
                 @blur="modelValueChangedDebounced"
                 placeholder="https://"
@@ -53,9 +52,8 @@ const modelValueChanged = async (event: Event) => {
     
     if (!!el.value && isValidUrl(el.value)) {
         pageTitle.value = title || "External Link";
+        modelValueEditMode.value = false;
     }
-    
-    modelValueEditMode.value = false;
 }
 
 const modelValueChangedDebounced = debounce(modelValueChanged, 100);
@@ -100,6 +98,10 @@ onMounted(async () => {
     
     max-width: 400px;
     width: 100%;
+
+    @media (max-width: 960px) {
+        width: 90%;
+    }
     
     .input-wrapper {
         position: relative;
@@ -109,10 +111,6 @@ onMounted(async () => {
         
         input {
             width: 100%;
-            
-            @media (max-width: 960px) {
-                width: 90%;
-            }
         }
         
         &.edit-mode {
