@@ -1,14 +1,14 @@
 import {isValidUrl} from "@/utils";
 import axios from "axios";
-import * as cheerio from "cheerio";
 
 export const fetchPageTitle = async (url: string): Promise<string | undefined> => {
     if (isValidUrl(url)) {
         try {
-            const { data } = await axios.get(url);
-            const dom = cheerio.load(data);
+            const { data } = await axios.get<Document>(url, {
+                responseType: 'document',
+            });
 
-            return dom('title').text();
+            return data.title;
         } catch (exception) {
             console.error(exception);
 
