@@ -4,7 +4,14 @@
     </div>
     <div class="home-view-intro">
         <h1 class="home-view-title">FrontEnd developer (Vue.js)</h1>
-        <h2 class="home-view-subtitle">ООО ЭтКонс - Тестовое задание</h2>
+        <h2 class="home-view-subtitle">
+            ООО ЭтКонс&nbsp;-
+            <a
+                class="external-link"
+                href="https://docs.google.com/document/d/1SbkhKTOizJp6UUUoWAa51i9zLFJ1n2Cue--Eu3Zl1I0/edit"
+                target="_blank"
+            >Тестовое задание</a>
+        </h2>
     </div>
 </template>
 
@@ -34,6 +41,10 @@
 .home-view-suptitle {
     font-size: 2rem;
     font-weight: 200;
+
+    a {
+        font-weight: 200;
+    }
     
     text-align: center;
     
