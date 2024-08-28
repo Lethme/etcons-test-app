@@ -1,1 +1,0 @@
-export type PromiseType<TPromise> = TPromise extends Promise<infer TPromiseType> ? TPromiseType : never;
